@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/usr/bin/bash
 
 # use first argument as number
 # or pick one at random
