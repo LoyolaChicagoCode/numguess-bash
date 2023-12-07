@@ -53,4 +53,4 @@ while true; do
     fi
 done
 
-echo "Bye for now!"
+echo "Come back soon!"
