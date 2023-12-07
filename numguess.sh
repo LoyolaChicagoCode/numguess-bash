@@ -34,7 +34,7 @@ while true; do
     # terminate if max number of steps exceeded
 
     if [[ $step -gt $max_steps ]]; then
-	echo "Sorry, that's more than $max_steps steps!"
+	echo "Sorry, that's more than $max_steps steps! You're done."
 	exit
     fi
     
