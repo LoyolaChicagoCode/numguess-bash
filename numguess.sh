@@ -1,6 +1,6 @@
 #!/bin/bash
 
-steps=0
+step=0
 max_steps=10
 max_number=100
 
@@ -33,7 +33,7 @@ while true; do
 
     # terminate if max number of steps exceeded
 
-    if [[ $step -gt $max_steps ]]; then
+    if (( $step > $max_steps )); then
 	echo "Sorry, that's more than $max_steps steps! You're done."
 	exit
     fi
@@ -46,10 +46,10 @@ while true; do
     # compare with chosen number and give feedback
 
     if [[ ! $guess =~ ^[0-9]+$ ]]; then
-	echo "Your input $guess isn't a valid number"
-    elif [[ $guess < $number ]]; then
+	echo "Your input \"$guess\" isn't a valid number"
+    elif (( $guess < $number )); then
 	echo "Oops, that was too low."
-    elif [[ $guess > $number ]]; then
+    elif (( $guess > $number )); then
 	echo "Oops, that was too high."
     else
 	echo "Congratulations, you got it after only $step step(s)!"
