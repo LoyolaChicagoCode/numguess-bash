@@ -11,8 +11,10 @@
 
 - Random number generation in bash
 - Checking whether a variable matches a regular expression (regex)
-- Conditionals (including multiple consecutive checks) and loops
-- Arithmetic evaluation and comparisons
+- Arithmetic evaluation and comparisons 
+- Conditionals (including multiple consecutive checks)
+- Loops along with continue and break statements
+- exit statement
 
 ## TODO
 

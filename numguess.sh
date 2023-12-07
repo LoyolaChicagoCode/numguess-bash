@@ -49,6 +49,8 @@ while true; do
 	echo "Oops, that was too high."
     else
 	echo "Congratulations, you got it after only $step step(s)!"
-	exit
+	break
     fi
 done
+
+echo "Bye for now!"
