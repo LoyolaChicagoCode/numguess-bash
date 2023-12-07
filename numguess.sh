@@ -37,10 +37,14 @@ while true; do
 	echo "Sorry, that's more than $max_steps steps! You're done."
 	exit
     fi
-    
-    # check validity of input and give feedback
+
+    # prompt user and read input
 
     read -p "STEP $step: What's your guess? " guess
+
+    # check validity of input
+    # compare with chosen number and give feedback
+
     if [[ ! $guess =~ ^[0-9]+$ ]]; then
 	echo "Your input $guess isn't a valid number"
     elif [[ $guess < $number ]]; then
