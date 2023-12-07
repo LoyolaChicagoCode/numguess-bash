@@ -7,8 +7,10 @@ max_number=100
 # use first argument as number
 # or pick one at random
 
+# use quotes in case the first argument is empty (not provided)
+
 number=$1
-if [ -z "$1" ]; then
+if [[ -z "$number" ]]; then
     number=$(shuf -i 1-$max_number -n 1)
 fi
 
@@ -31,7 +33,7 @@ while true; do
 
     # terminate if max number of steps exceeded
 
-    if [ $step -gt $max_steps ]; then
+    if [[ $step -gt $max_steps ]]; then
 	echo "Sorry, that's more than $max_steps steps!"
 	exit
     fi
@@ -41,9 +43,9 @@ while true; do
     read -p "STEP $step: What's your guess? " guess
     if [[ ! $guess =~ ^[0-9]+$ ]]; then
 	echo "Your input $guess isn't a valid number"
-    elif [ $guess -lt $number ]; then
+    elif [[ $guess < $number ]]; then
 	echo "Oops, that was too low."
-    elif [ $guess -gt $number ]; then
+    elif [[ $guess > $number ]]; then
 	echo "Oops, that was too high."
     else
 	echo "Congratulations, you got it after only $step step(s)!"
