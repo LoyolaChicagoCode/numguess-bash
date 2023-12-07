@@ -16,6 +16,8 @@
 - Loops along with continue and break statements
 - exit statement
 
-## TODO
+## Possible enhancements
 
+- Playing more than one game at a time
+- Keep track of shortest games played so far
 - Automated testing
