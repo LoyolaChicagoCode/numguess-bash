@@ -34,8 +34,8 @@ while true; do
     # terminate if max number of steps exceeded
 
     if (( $step > $max_steps )); then
-	echo "Sorry, that's more than $max_steps steps! You're done."
-	exit
+        echo "Sorry, that's more than $max_steps steps! You're done."
+        exit
     fi
 
     # prompt user and read input
@@ -46,14 +46,14 @@ while true; do
     # compare with chosen number and give feedback
 
     if [[ ! $guess =~ ^[0-9]+$ ]]; then
-	echo "Your input \"$guess\" isn't a valid number"
+        echo "Your input \"$guess\" isn't a valid number"
     elif (( $guess < $number )); then
-	echo "Oops, that was too low."
+        echo "Oops, that was too low."
     elif (( $guess > $number )); then
-	echo "Oops, that was too high."
+        echo "Oops, that was too high."
     else
-	echo "Congratulations, you got it after only $step step(s)!"
-	break
+        echo "Congratulations, you got it after only $step step(s)!"
+        break
     fi
 done
 
